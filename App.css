@@ -1,0 +1,198 @@
+body {
+  background-color: #E8E6CF;
+}
+
+.cardblack,
+.cardred {
+  background-color: #E8E6CF;
+  display: inline-block;
+  font-size: 2em;
+  padding: 10px 0px;
+  width: 75px;
+  height: 90px;
+  border: #000 1px solid;
+  border-radius: 3px;
+}
+
+.cardblack {
+  color: #0F0003;
+}
+
+.cardred {
+  color: #690012;
+}
+
+#table {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  text-align: center;
+  height: 600px;
+  background-color: #073142;
+  color: #E8E6CF;
+}
+
+.center-box {
+  position: relative;
+  grid-column: 5 / 11;
+  grid-row: 2 / 5;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.left-box, .right-box {
+  grid-row: 2 / 5;
+  position: relative;
+}
+
+.top-box, .bottom-box {
+  grid-column: 1/15;
+  position: relative;
+}
+
+
+.left-box {
+  grid-column: 1/5;
+}
+
+.right-box {
+  grid-column: 11/15;
+}
+
+.top-box {
+  grid-row: 1/2;
+}
+
+.bottom-box {
+  grid-row: 5/6;
+}
+
+.cards {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.lefthand .cards,
+.righthand .cards {
+  width: 75px;
+}
+
+.lefthand .cardblack,
+.righthand .cardblack {
+  margin-bottom: -125%;
+  transform: translate(0, -125%);
+}
+
+.trick {
+  width: 100%;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.tricktop,
+.trickbottom {
+  grid-column: 2;
+}
+
+.trickleft,
+.trickright {
+  grid-row: 2;
+}
+
+.tricktop {
+  grid-row: 1;
+}
+
+.trickbottom {
+  grid-row: 3;
+}
+
+.trickleft {
+  grid-column: 1;
+}
+
+.trickright {
+  grid-column: 3;
+}
+
+.upcard {
+  grid-row: 2;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.button {
+  background-color: #E8E6CF;
+  color: #0F0003;
+  display: inline-block;
+  flex-basis: 100%;
+  margin: 3px;
+  padding: 10px 5px;
+  border: #000 1px solid;
+  border-radius: 3px;
+  position: static;
+}
+
+.bid-controls {
+  width: 100%;
+  margin: 0 auto;
+  grid-row: 3;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.control-label {
+  margin: 3px;
+  flex-basis: 120%;
+  padding: 10px 5px;
+}
+
+.debug-buttons {
+  position: fixed;
+  bottom: 6px;
+}
+
+.debug-buttons > .button {
+  background-color: #073142;
+  color: #E8E6CF;
+}
+
+.sidebar {
+  height: 600px;
+  position: absolute;
+}
+
+.scoreboard-container {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.scoreboard {
+  border: 3px solid #073142;
+  border-radius: 5px;
+  color: #0F0003;
+  font-size: 1.5em;
+  color: #E8E6CF;
+  background-color: #073142;
+}
+
+.playername {
+  margin: 5px;
+}
+
+.join-seat-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
